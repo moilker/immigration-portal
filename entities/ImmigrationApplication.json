@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "passport_number": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "destination_country": {
+      "type": "string",
+      "enum": [
+        "USA",
+        "Canada"
+      ]
+    },
+    "visa_type": {
+      "type": "string",
+      "enum": [
+        "Tourist/Visitor",
+        "Student",
+        "Work Permit",
+        "Permanent Residence",
+        "Family Sponsorship",
+        "Refugee/Asylum",
+        "Business"
+      ]
+    },
+    "marital_status": {
+      "type": "string",
+      "enum": [
+        "Single",
+        "Married",
+        "Divorced",
+        "Widowed"
+      ]
+    },
+    "education_level": {
+      "type": "string",
+      "enum": [
+        "High School",
+        "Bachelor's",
+        "Master's",
+        "PhD",
+        "Other"
+      ]
+    },
+    "employment_status": {
+      "type": "string",
+      "enum": [
+        "Employed",
+        "Self-Employed",
+        "Student",
+        "Unemployed"
+      ]
+    },
+    "have_criminal_record": {
+      "type": "boolean"
+    },
+    "previously_refused_visa": {
+      "type": "boolean"
+    },
+    "additional_notes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Submitted",
+        "Under Review",
+        "Approved",
+        "Rejected"
+      ],
+      "default": "Draft"
+    },
+    "reference_number": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "name": "ImmigrationApplication"
+}
