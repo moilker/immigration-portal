@@ -52,3 +52,4 @@ function createEntityClient(entityName) {
 }
 
 export const ImmigrationApplication = createEntityClient("ImmigrationApplication");
+export const PendingReply = createEntityClient("PendingReply");

@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import ApplyPage from "./pages/ApplyPage";
 import TrackPage from "./pages/TrackPage";
 import AdminPage from "./pages/AdminPage";
+import ApprovalsPage from "./pages/ApprovalsPage";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/apply" element={<ApplyPage />} />
         <Route path="/track" element={<TrackPage />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/approvals" element={<ApprovalsPage />} />
       </Routes>
     </BrowserRouter>
   );
