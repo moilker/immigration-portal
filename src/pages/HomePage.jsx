@@ -54,6 +54,7 @@ export default function HomePage() {
             <Link to="/" className="hover:text-blue-200 transition">Home</Link>
             <Link to="/apply" className="hover:text-blue-200 transition">Apply Now</Link>
             <Link to="/track" className="hover:text-blue-200 transition">Track Application</Link>
+            <Link to="/payment" className="bg-yellow-400 text-[#003366] font-bold px-4 py-1 rounded-lg hover:bg-yellow-300 transition">💳 Pay Now</Link>
           </nav>
         </div>
         <div className="bg-[#B22222] py-1 text-center text-xs text-white tracking-widest font-semibold">
