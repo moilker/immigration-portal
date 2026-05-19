@@ -1,0 +1,10 @@
+{
+  "type": "typeform",
+  "scopes": [
+    "responses:read",
+    "forms:read",
+    "webhooks:write",
+    "webhooks:read",
+    "accounts:read"
+  ]
+}
