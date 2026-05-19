@@ -1,10 +1,11 @@
 {
   "type": "typeform",
   "scopes": [
-    "responses:read",
     "forms:read",
-    "webhooks:write",
+    "forms:write",
+    "responses:read",
     "webhooks:read",
+    "webhooks:write",
     "accounts:read"
   ]
 }
