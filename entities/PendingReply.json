@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "original_message_id": {
+      "type": "string"
+    },
+    "original_from": {
+      "type": "string"
+    },
+    "original_subject": {
+      "type": "string"
+    },
+    "original_body": {
+      "type": "string"
+    },
+    "suggested_reply": {
+      "type": "string"
+    },
+    "approval_token": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "sent"
+      ]
+    },
+    "thread_id": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "name": "PendingReply"
+}
