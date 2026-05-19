@@ -1,5 +1,38 @@
 import { Link } from "react-router-dom";
-import { Shield, Globe, FileText, Clock, CheckCircle, Users } from "lucide-react";
+import { Shield, Globe, FileText, Clock, CheckCircle, Users, Download } from "lucide-react";
+
+const PDF_FILES = [
+  {
+    emoji: "✈️",
+    title: "Tourist Visa Application",
+    subtitle: "USA & Canada — Visitor / Tourism",
+    color: "#003366",
+    bg: "#e8f0fb",
+    border: "#003366",
+    url: "https://base44.app/api/apps/6a08052b4bda806d077bcc68/files/mp/public/6a08052b4bda806d077bcc68/1dc068b57_tourist_visa_application.pdf",
+    filename: "tourist_visa_application.pdf",
+  },
+  {
+    emoji: "🏠",
+    title: "Permanent Residence Application",
+    subtitle: "Green Card (USA) & PR (Canada)",
+    color: "#1a7a4a",
+    bg: "#e8f5ee",
+    border: "#1a7a4a",
+    url: "https://base44.app/api/apps/6a08052b4bda806d077bcc68/files/mp/public/6a08052b4bda806d077bcc68/610e41729_permanent_residence_application.pdf",
+    filename: "permanent_residence_application.pdf",
+  },
+  {
+    emoji: "⚽",
+    title: "FIFA World Cup 2026 Visa",
+    subtitle: "Special Event Visa — June 11 – July 19, 2026",
+    color: "#7b0d1e",
+    bg: "#fdf0f2",
+    border: "#7b0d1e",
+    url: "https://base44.app/api/apps/6a08052b4bda806d077bcc68/files/mp/public/6a08052b4bda806d077bcc68/3999c355a_worldcup2026_visa_application.pdf",
+    filename: "worldcup2026_visa_application.pdf",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -23,7 +56,6 @@ export default function HomePage() {
             <Link to="/track" className="hover:text-blue-200 transition">Track Application</Link>
           </nav>
         </div>
-        {/* Government bar */}
         <div className="bg-[#B22222] py-1 text-center text-xs text-white tracking-widest font-semibold">
           OFFICIAL IMMIGRATION SERVICES PORTAL — USA & CANADA
         </div>
@@ -55,6 +87,42 @@ export default function HomePage() {
             >
               Track My Application
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PDF Downloads Section ── */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">📄 Download Application Forms</h3>
+            <p className="text-gray-500 text-sm">
+              Download, print, and fill out the official application forms for your visa type.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {PDF_FILES.map((f, i) => (
+              <div
+                key={i}
+                className="rounded-xl border-2 p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition"
+                style={{ borderColor: f.border, backgroundColor: f.bg }}
+              >
+                <div className="text-5xl mb-4">{f.emoji}</div>
+                <h4 className="font-bold text-gray-800 text-base mb-1">{f.title}</h4>
+                <p className="text-gray-500 text-xs mb-5">{f.subtitle}</p>
+                <a
+                  href={f.url}
+                  download={f.filename}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-white font-semibold px-5 py-2 rounded-lg text-sm transition hover:opacity-90"
+                  style={{ backgroundColor: f.color }}
+                >
+                  <Download className="w-4 h-4" />
+                  Download PDF
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
